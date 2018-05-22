@@ -120,7 +120,7 @@ $returnurl = optional_param('returnurl', '', PARAM_LOCALURL);
 $templateid = optional_param('templateid', 0, PARAM_INTEGER);
 $templatename = optional_param('templatename', '', PARAM_NOTAGS);
 $new = optional_param('createnew', 0, PARAM_INTEGER);
-$lang = optional_param('lang', 'en', PARAM_LANG);
+$lang = current_language();								 			// 改為抓取用戶當前使用語言
 
 $context = context_system::instance();
 require_login();

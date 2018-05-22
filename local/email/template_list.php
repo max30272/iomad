@@ -110,14 +110,6 @@ echo '<h3>' . get_string('email_templates_for', $block, $company->get_name()) . 
 // Check we can actually do anything on this page.
 iomad::require_capability('local/email:list', $context);
 
-// Deal with the language selector.
-$langs = get_string_manager()->get_list_of_translations();
-$s = new single_select($PAGE->url, 'lang', $langs);
-$s->label = get_string('language') . $OUTPUT->help_icon('language', 'local_email') . '&nbsp';
-$s->class = 'langselector';
-$s->selected = $lang;
-echo $OUTPUT->box($OUTPUT->render($s), 'langselectorbox');
-
 // Get the number of templates.
 $objectcount = $DB->count_records('email_template');
 echo $OUTPUT->paging_bar($objectcount, $page, $perpage, $baseurl);
