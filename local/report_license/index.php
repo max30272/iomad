@@ -733,7 +733,7 @@ if (!empty($showchart)) {
 
         // Bar chart
         $pi->setFontProperties(array(
-            'FontName' => $CFG->dirroot . '/local/iomad/pchart2/fonts/verdana.ttf',
+            'FontName' => $CFG->dirroot . '/local/iomad/pchart2/fonts/NotoSansCJKtc-Regular.otf',
             'FontSize' => 10,
             'R' => 0, 'G' => 0, 'B' => 0,
         ));
@@ -749,7 +749,7 @@ if (!empty($showchart)) {
         $pp = new pPie($pi, $chartdata);
         $pi->setShadow(false);
         $pi->setFontProperties(array(
-            'FontName' => $CFG->dirroot . '/local/iomad/pchart2/fonts/verdana.ttf',
+            'FontName' => $CFG->dirroot . '/local/iomad/pchart2/fonts/NotoSansCJKtc-Regular.otf',
             'FontSize' => 10,
             'R' => 0, 'G' => 0, 'B' => 0,
         ));
@@ -764,7 +764,7 @@ if (!empty($showchart)) {
             'Style' => LEGEND_BOX,
             'Mode' => LEGEND_HORIZONTAL,
         ));
-        $pi->drawText(PCHART_SIZEX * 0.5, 10, 'Course completion', array(
+        $pi->drawText(PCHART_SIZEX * 0.5, 10, '課程進度', array(
             'Align' => TEXT_ALIGN_TOPMIDDLE,
         ));
         $pi->autoOutput();
