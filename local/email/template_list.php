@@ -124,7 +124,8 @@ $ntemplates = count($configtemplates);
 
 // Returns true if user is allowed to send emails using a particular template.
 function allow_sending_to_template($templatename) {
-    return in_array($templatename, array('advertise_classroom_based_course'));
+	// return in_array($templatename, array('advertise_classroom_based_course'));
+    return in_array($templatename, array('')); // 拿掉可能為測試用而塞的固定值
 }
 
 function create_default_template_row($templatename, $strdefault, $stradd, $strsend, $lang) {
